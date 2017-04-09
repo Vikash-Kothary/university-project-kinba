@@ -19,21 +19,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to install the software and how to install them
 
-```
-Install Java
-$ sudo apt-get update
-$ java -version
-$ sudo apt-get install default-jre
-$ sudo apt-get install default-jdk
-
-Install all MyRobotLab Services
-$ wget https://github.com/MyRobotLab/myrobotlab/releases/download/1.0.1758/myrobotlab.jar
-$ java -jar myrobotlab.jar -install
-
-Run MyRobotLab
-$ java -jar myrobotlab.jar
-```
-
 ### Installing 
 
 A step by step series of examples that tell you have to get a development env running
@@ -41,7 +26,7 @@ A step by step series of examples that tell you have to get a development env ru
 Say what the step will be
 
 ```
-Give the example
+sh setup.sh
 ```
 
 And repeat
