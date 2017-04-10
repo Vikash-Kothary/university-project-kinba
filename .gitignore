@@ -1,15 +1,6 @@
 # MyRobotLab files
 .myrobotlab/
-myrobotlab.jar
-myrobotlab.log
-resource/
-haarcascades/
-hogcascades/
-lbpcascades/
-libraries/
-repo/
-repo.json
-ivychain.xml
+MyRobotLab/
 
 # Virtualenv files
 venv
