@@ -27,15 +27,14 @@ if [ ! -f $FILENAME ]; then
     wget "https://github.com/MyRobotLab/myrobotlab/releases/download/$LATEST_VERSION/$FILENAME"
 
     # Install all required MyRobotLab services
-    java -jar $FILENAME -install ProgramAB MarySpeech WebkitSpeechRecognition OpenCV
+    java -jar $FILENAME -install ProgramAB MarySpeech WebkitSpeechRecognition OpenCV OpenNi
 
     # Install male MarySpeech voice
     wget "https://github.com/MyRobotLab/pyrobotlab/blob/ff6e2cef4d0642e47ee15e353ef934ac6701e713/home/hairygael/voice-cmu-bdl-5.2.jar"
     mv "voice-cmu-bdl-5.2.jar" "libraries/jar/."
 
     # Move code to correct folders
-    mkdir "ProgramAB/bots/kinbaChatbot/aiml/"
-    cp "../aiml/" "ProgramAB/bots/kinbaChatbot/aiml/"
+    cp "../aiml/" "./ProgramAB/bots/kinbaChatbot/"
     cp -r "../main/" "pythonModules/"
 
     # Set project to run on boot
