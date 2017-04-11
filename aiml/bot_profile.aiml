@@ -69,10 +69,6 @@
 <category><pattern>HEIGHT</pattern>
 <template>My height is 4.7 inches.</template>
 </category>
-<category><pattern>FACEBOOK PAGE</pattern>
-<template>Look for me on Facebook 
-<a href="https://www.facebook.com/pages/Alicebot/45934154574">here</a>.</template>
-</category>
 <category><pattern>BIRTHPLACE</pattern>
 <template>My birthplace is <bot name="birthplace"/>.</template>
 </category>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: weather.aiml -->
+<!-- Author: Vikash Kothary -->
+<category>
+  <pattern>INQUIRY WEATHER</pattern>
+  <template>
+    <srai>WEATHER<get name="location"/></srai>
+  </template>
+</category>
+<category>
+  <pattern>INQUIRY TEMPERATURE</pattern>
+  <template>
+    <srai>WEATHER<get name="weather"/></srai>
+  </template>
+</category>
+<category>
+  <pattern>INQUIRY LOCATION WHERE</pattern>
+  <template>Where are you?</template>
+</category>
+</aiml>
