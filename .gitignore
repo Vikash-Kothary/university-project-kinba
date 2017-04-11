@@ -1,6 +1,6 @@
 # MyRobotLab files
 .myrobotlab/
-MyRobotLab/
+myrobotlab/
 
 # Virtualenv files
 venv
