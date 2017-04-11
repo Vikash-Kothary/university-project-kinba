@@ -24,11 +24,11 @@ if male:
     voiceType = "cmu-bdl-hsmm"
 
 
-def main():
+def stuff():
     # create ProgramAB chat bot
-    chatbot = Runtime.createAndStart("kinbaChatbot", "ProgramAB")
+    chatbot = Runtime.createAndStart("chatbot", "ProgramAB")
     chatbot.startSession(aimlUserName, aimlBotName)
-    chatbot.setPath(aimlPath)
+    # chatbot.setPath(aimlPath)
 
     html_filter = Runtime.createAndStart('htmlfilter', "HtmlFilter")
 
@@ -38,18 +38,18 @@ def main():
     if mouth:
         html_filter.addTextListener(mouth)
 
-    return chatbot
 
+def main():
     # Speech Synthesis
-    # mouth = Runtime.createAndStart("mouth", "Speech")
-    mouth = Runtime.createAndStart("mouth", "MarySpeech")
-    # mouth = Runtime.createAndStart("mouth", "AcapelaSpeech")
+    #mouth = Runtime.createAndStart("mouth", "Speech")
+    #mouth2 = Runtime.createAndStart("mouth", "MarySpeech")
+    #mouth3 = Runtime.createAndStart("mouth", "AcapelaSpeech")
     # mouth.setVoice(voiceType)
     # mouth.setLanguage(lang)
 
     input_text = "How are you?"
-    output_text = chatbot.getResponse(input_text)
-    print(output_text)
+    #output_text = chatbot.getResponse(input_text)
+    # print(output_text)
 
     # Webkit Speech Recognition
     ear = Runtime.createAndStart("ears", "WebkitSpeechRecognition")
@@ -67,6 +67,10 @@ def main():
     htmlfilter.addTextListener(mouth)
 
     python.subscribe(ear.getName(), "publishText")
+
+
+def heard(data):
+    print(data)
 
 if __name__ == '__main__':
     main()
