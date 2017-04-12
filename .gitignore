@@ -24,6 +24,7 @@ tags
 
 # Vagrant files
 .vagrant/
+*.log
 
 # ROS files
 build/
