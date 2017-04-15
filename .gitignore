@@ -84,3 +84,6 @@ CTestTestfile.cmake
 pyvenv.cfg
 .venv
 pip-selfcheck.json
+
+# Ansible files
+*.retry
