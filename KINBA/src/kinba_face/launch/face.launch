@@ -1,0 +1,8 @@
+<launch>
+  <node name="ear" pkg="kinba_face" type="ear.py" output="screen" />
+  
+  <node name="mouth" pkg="kinba_face" type="mouth.py" output="screen" />	
+  
+  <node name="eye" pkg="kinba_face" type="eye.py" output="screen" />
+
+</launch>
