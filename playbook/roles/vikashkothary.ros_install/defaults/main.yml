@@ -1,0 +1,5 @@
+---
+# indigo / kinetic
+ros_release: "indigo"
+# desktop-full / desktop / ros-base
+ros_package: "ros-base"

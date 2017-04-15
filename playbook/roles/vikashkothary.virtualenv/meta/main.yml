@@ -1,0 +1,20 @@
+---
+
+galaxy_info:
+  author: Vikash Kothary
+  description: Setup python virtualenv
+  company: "Vikash Kothary"
+  license: "MIT"
+  min_ansible_version: 1.2
+  platforms:
+  - name: Ubuntu
+    versions:
+    - precise
+    - trusty
+  categories:
+    - cloud
+    - development
+    - system
+    - python
+    - packaging
+dependencies: []

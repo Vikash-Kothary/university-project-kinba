@@ -1,0 +1,7 @@
+pyYAML
+pyowm
+rospkg
+catkin_pkg
+SpeechRecognition
+PyAudio
+pyttsx

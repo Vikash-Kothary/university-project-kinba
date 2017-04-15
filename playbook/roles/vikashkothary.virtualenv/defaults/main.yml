@@ -1,0 +1,3 @@
+---
+# virtualenv
+virtualenv_path: /vagrant/.venv

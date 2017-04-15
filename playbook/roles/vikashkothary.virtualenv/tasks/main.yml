@@ -1,0 +1,13 @@
+- name: Install apt packages
+  apt: pkg={{ item }} state=present update_cache=true
+  with_items: [build-essential, python-dev, python-pip]
+
+- name: Install latest virtualenv version
+  command: pip install virtualenv
+
+- name: Create the virtualenv
+  command: virtualenv -p python3 {{ virtualenv_path }}
+
+- name: Install requirements
+  pip: requirements={{ virtualenv_requirements_file }} virtualenv={{ virtualenv_path }} extra_args='--process-dependency-links'
+  when: virtualenv_requirements_file is defined

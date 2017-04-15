@@ -1,0 +1,27 @@
+- name: Setup your sources.list
+  command: sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+
+- name: Setup your keys
+  command: apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 0xB01FA116
+
+- name: Install ROS full desktop
+  apt: >
+    update_cache=yes
+    state=present
+    name={{item}}
+  with_items:
+    - ros-{{ros_release}}-{{ros_package}}
+    - python-rosinstall
+
+- name: Initalize rosdep
+  command: rosdep init
+  ignore_errors: yes  # will raise if run previously
+
+- name: Update rosdep
+  command: rosdep update
+
+- name: Add ros vars to env
+  lineinfile: >
+    dest=/home/vagrant/.bashrc
+    line="source /opt/ros/{{ros_release}}/setup.bash"
+    state=present
