@@ -4,6 +4,6 @@ ros_release: "indigo"
 ros_package: "desktop-full"
 
 # virtualenv
-path: /home/vikash/Documents/KINBA
-virtualenv_path: "{{path}}/.venv"
-virtualenv_requirements_file: "{{path}}/requirements.pip"
+base_path: /home/vikash/Documents/KINBA
+virtualenv_path: "{{base_path}}/.venv"
+virtualenv_requirements_file: "{{base_path}}/requirements.pip"

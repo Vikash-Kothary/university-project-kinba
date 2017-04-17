@@ -1,3 +1,4 @@
 ---
 # virtualenv
-virtualenv_path: /vagrant/.venv
+base_path: /vagrant
+virtualenv_path: "{{base_path}}/.venv"
