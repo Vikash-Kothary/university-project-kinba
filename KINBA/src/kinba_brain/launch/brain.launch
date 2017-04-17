@@ -1,0 +1,5 @@
+<launch>
+
+  <node name="weather" pkg="kinba_brain" type="weather.py" output="screen" />
+
+</launch>
