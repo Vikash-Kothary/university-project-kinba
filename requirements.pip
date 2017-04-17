@@ -5,3 +5,4 @@ catkin_pkg
 SpeechRecognition
 PyAudio
 -e git://github.com/Julian-O/pyttsx.git#egg=pyttsx
+clarifai
