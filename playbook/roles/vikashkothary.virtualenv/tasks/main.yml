@@ -1,9 +1,7 @@
 - name: Install apt packages
   apt: pkg={{ item }} state=present update_cache=true
-  with_items: [build-essential, python-dev, python-pip]
-
-- name: Install latest virtualenv version
-  command: pip install virtualenv
+  with_items: [build-essential, python-dev, python-pip, python-virtualenv]
+  become: true
 
 - name: Create the virtualenv
   command: virtualenv -p python3 {{ virtualenv_path }}

@@ -1,16 +1,9 @@
 ---
 
-- hosts: vagrant
-  become: true
-  roles:
-  - role: vikashkothary.ros_install
-
-  - role: vikashkothary.virtualenv
-
-- hosts: vagrant
-  become: true
+- hosts: localhost
   tasks:
-    - name: Install pyaudio dependencies
+    - name: Install dependencies
+      become: true
       apt: >
         update_cache=yes
         state=present
@@ -22,3 +15,11 @@
         - libjack-jackd2-dev
         - mplayer
         - pulseaudio
+
+- hosts: localhost
+  roles:
+  - role: vikashkothary.ros_install
+    become: true
+
+  - role: vikashkothary.virtualenv
+

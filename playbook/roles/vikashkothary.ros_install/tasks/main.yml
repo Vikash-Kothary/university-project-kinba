@@ -19,9 +19,12 @@
 
 - name: Update rosdep
   command: rosdep update
+  
+- name: Create .bashrc
+  file: path=/home/.bashrc state=touch
 
 - name: Add ros vars to env
   lineinfile: >
-    dest=/home/vagrant/.bashrc
+    dest=/home/.bashrc
     line="source /opt/ros/{{ros_release}}/setup.bash"
     state=present

@@ -4,5 +4,6 @@ ros_release: "indigo"
 ros_package: "desktop-full"
 
 # virtualenv
-virtualenv_requirements_file: /vagrant/requirements.pip
-virtualenv_path: /vagrant/.venv
+path: /home/vikash/Documents/KINBA
+virtualenv_path: "{{path}}/.venv"
+virtualenv_requirements_file: "{{path}}/requirements.pip"
