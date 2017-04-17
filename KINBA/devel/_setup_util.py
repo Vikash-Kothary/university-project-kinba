@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/home/vikash/Documents/KINBA/.venv/bin/python
 # -*- coding: utf-8 -*-
 
 # Software License Agreement (BSD License)
@@ -56,7 +56,7 @@ ENV_VAR_SUBFOLDERS = {
     'LD_LIBRARY_PATH' if not IS_DARWIN else 'DYLD_LIBRARY_PATH': ['lib', os.path.join('lib', 'x86_64-linux-gnu')],
     'PATH': 'bin',
     'PKG_CONFIG_PATH': [os.path.join('lib', 'pkgconfig'), os.path.join('lib', 'x86_64-linux-gnu', 'pkgconfig')],
-    'PYTHONPATH': 'lib/python2.7/dist-packages',
+    'PYTHONPATH': 'lib/python3/dist-packages',
 }
 
 
