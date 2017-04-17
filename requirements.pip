@@ -4,4 +4,4 @@ rospkg
 catkin_pkg
 SpeechRecognition
 PyAudio
-pyttsx
+-e git://github.com/Julian-O/pyttsx.git#egg=pyttsx
