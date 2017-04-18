@@ -4,7 +4,7 @@
   become: true
 
 - name: Create the virtualenv
-  command: virtualenv -p python3 {{ virtualenv_path }}
+  command: virtualenv {{ virtualenv_path }}
 
 - name: Install requirements
   pip: requirements={{ virtualenv_requirements_file }} virtualenv={{ virtualenv_path }} extra_args='--process-dependency-links'

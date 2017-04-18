@@ -3,6 +3,6 @@
   
   <node name="mouth" pkg="kinba_face" type="mouth.py" output="screen" />	
   
-  <node name="eye" pkg="kinba_face" type="eye.py" output="screen" />
+  <node name="chatbot" pkg="kinba_face" type="chatbot.py" output="screen" />
 
 </launch>
